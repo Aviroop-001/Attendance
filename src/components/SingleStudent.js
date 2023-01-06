@@ -8,10 +8,10 @@ function SingleStudent({ student, studentLogoutHandler, studentDeleteHandler }) 
     <tr key={student.name}>
       <td className="px-6 py-1 text-sm text-gray-800 whitespace-nowrap">
         <div className="flex">
-            <div className="text-base font-bold tracking-wide">{student.name}</div>
+            <div className="text-xl font-medium tracking-wide">{student.name}</div>
         </div>
       </td>
-      <td className="px-6 py-1 text-sm font-medium text-right whitespace-nowrap">
+      <td className="px-6 py-1 text-md font-medium text-right whitespace-nowrap">
         <a className="hover:text-green-700" href="#">
           {student.roll}
         </a>
@@ -27,7 +27,8 @@ function SingleStudent({ student, studentLogoutHandler, studentDeleteHandler }) 
         </div>
       </td>
       <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
-        <div className="flex flex-col">
+        {student.logout.date==="" ? <div className="text-md text-green-400">PRESENT</div>
+        : <div className="flex flex-col">
           <a className="text-gray-700 hover:text-red-700" href="#">
             {student.logout.date}
           </a>
@@ -35,6 +36,7 @@ function SingleStudent({ student, studentLogoutHandler, studentDeleteHandler }) 
             {student.logout.time}
           </a>
         </div>
+        }
       </td>
       <td className="px-6 py-1 text-sm font-medium text-right whitespace-nowrap">
         <a className="hover:text-green-700 text-xl" href="#">
