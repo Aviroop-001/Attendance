@@ -30,16 +30,3 @@ function currentDate() {
 }
 
 export {currentDate, currentDateTime}
-
-const userUpdateHandler = async(update) => {
-  try {
-    const res = await Axios.patch(`https://fake-api-51ea.onrender.com/students/${update.id}`, update);
-    // alert("User edited")
-    return res;
-  } catch (error) {
-    console.log(error)
-  }
-};
-
-
-export { userUpdateHandler}

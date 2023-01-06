@@ -7,7 +7,7 @@ function App() {
   const [present, setpresent] = useState(0);
 
   return (
-    <div className="App">
+    <div className="App p-5">
       <Header present={present}/>
       <Dashboard present={present} setpresent={setpresent} />
     </div>

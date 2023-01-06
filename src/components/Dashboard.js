@@ -78,7 +78,7 @@ function Dashboard({present, setpresent }) {
     <div style={{height:'100vh'}}>
       <Input studentAddHandler={studentAddHandler}/>
       {students ? <StudentsDisplay students={students} studentLogoutHandler={studentLogoutHandler} studentDeleteHandler={studentDeleteHandler}/>
-      : <p>Log students</p>}
+      : <p className="text-3xl text-bold my-500 text-center">Log students</p>}
     </div>
   );
 }

@@ -19,7 +19,7 @@ function Input({ studentAddHandler }) {
       }
 
   return (
-    <div><form className=" flex justify-evenly bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={submitHandler}>
+    <div className='sticky top-20'><form className=" flex justify-evenly bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={submitHandler}>
     <div className="mb-1">
     <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mr-2 leading-tight focus:outline-none focus:shadow-outline" placeholder='User Name' name="name"/>
     </div>
